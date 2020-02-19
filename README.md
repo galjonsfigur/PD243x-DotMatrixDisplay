@@ -1,6 +1,6 @@
 # Arudino Dot-matrix Display Adapter Library
 
-![Build flag](https://github.com/galjonsfigur/Arduino-DotMatrixLibrary/workflows/platformio-build.svg)
+![PlatformIO CI](https://github.com/galjonsfigur/Arduino-DotMatrixLibrary/workflows/PlatformIO%20CI/badge.svg)  [![Documentation Status](https://readthedocs.org/projects/arduino-dotmatrixlibrary/badge/?version=latest)](https://arduino-dotmatrixlibrary.readthedocs.io/en/latest/?badge=latest)   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
 This project is an Arduino-compatible library for an [PD243x I²C Display Adapter Board](https://github.com/galjonsfigur/PD243X-I2C-Adapter).
 It can be used on any Arduino-compatible environment that supports `Wire`
@@ -11,7 +11,7 @@ used both with Arduino IDE and PlatformIO environments.
 
 
 ### Documentation
-All API documentation can be found [here](docs/). It contains description of every
+All API documentation can be found [here](https://arduino-dotmatrixlibrary.readthedocs.io/en/latest/). It contains description of every
 method and functionalities of this library. There is also folder with examples,
 which can be found [here](examples/).
 
