@@ -1,0 +1,20 @@
+site_name: Arduino Dot-Matrix Library Documentation
+site_description: Description of the Arduino Dot-Matrix Library Documentation
+repo_url: https://github.com/galjonsfigur/Arduino-DotMatrixLibrary/
+
+theme:
+  name: "readthedocs"
+strict: false
+
+markdown_extensions:
+- admonition:
+
+nav:
+- Overview: 'index.md'
+- API: 'api.md'
+- Examples:
+    - Hello World: 'examples/hello_world.md'
+    - Display Test: 'examples/display_test.md'
+    - Display Attributes: 'examples/display_attributes.md'
+    - Write without delay(): 'examples/write_without_delay.md'
+    

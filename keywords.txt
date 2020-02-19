@@ -1,0 +1,38 @@
+#######################################
+# Syntax Coloring Map for DotMatrixDisplay
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+DotMatrixDisplay	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin		KEYWORD2
+clear		KEYWORD2
+setAttributes	KEYWORD2
+setLampTest	KEYWORD2
+setBrightness	KEYWORD2
+setScrollSpeed	KEYWORD2
+setRedLED	KEYWORD2
+setGreenLED	KEYWORD2
+sendChar	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+BRIGHTNESS_100		LITERAL1
+BRIGHTNESS_50		LITERAL1
+BRIGHTNESS_25		LITERAL1
+BRIGHTNESS_0		LITERAL1
+NO_ATTRIBUTE		LITERAL1
+CURSOR			LITERAL1
+BLINK			LITERAL1
+BLINKING_CURSOR 	LITERAL1
+ALTERNATING_CURSOR	LITERAL1
+BLINK_SCREEN		LITERAL1

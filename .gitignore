@@ -1,0 +1,6 @@
+# PlatformIO build folder
+.pio
+# Eclispe CDT-specific (C/C++ Development Tooling)
+.cproject
+.project
+.settings/
