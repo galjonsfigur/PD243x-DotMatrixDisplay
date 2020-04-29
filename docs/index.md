@@ -1,3 +1,5 @@
+# Overview
+
 This project is an Arduino-compatible library for an PD243x I²C Display Adapter Board.
 PD245x displays are small four-digit alphanumeric dot-matrix displays avarible in various colors.
 
