@@ -1,6 +1,6 @@
 # Arduino Dot-Matrix Library
 
-This library allows to use any Arduino-compatible board with an PD243x I²C Display Adapter Board. It should work as long as `Wire` library and C++ compiler is avarible for a particular Arduino platform.
+This library allows to use any Arduino-compatible board with an PD243x I²C Display Adapter Board. It should work as long as `Wire` library and C++ compiler is available for a particular Arduino platform.
 
 ## DotMatrixDisplay::DotMatrixDisplay
 
@@ -14,7 +14,7 @@ DotMatrixDisplay(TwoWire *I2CInterface)
 
 #### Parameters
 
-- `TwoWire *I2CInterface`: Address of `Wire` object. With most of Arduino boards only `Wire` will be avarible, but with more capable controllers like STM32 other I²C buses like `Wire1`, `Wire2` can be used.
+- `TwoWire *I2CInterface`: Address of `Wire` object. With most of Arduino boards only `Wire` will be available, but with more capable controllers like STM32 other I²C buses like `Wire1`, `Wire2` can be used.
 
 #### Returns
 
@@ -115,7 +115,7 @@ disp.setAttributes(DotMatrixDisplay::NO_ATTRIBUTE);
 
 ## DotMatrixDisplay::setLampTest
 
-Enables or disables PD243X lamp test routine. Test routine displays all dots at 50% brightness and can be helpful when looking for damaged LEDs in display.
+Enables or disables PD243X lamp test routine. Test routine displays all dots at 50% brightness and can be helpful when looking for damaged LEDs in the display.
 
 #### Syntax
 
@@ -169,11 +169,11 @@ Allows to change default scroll speed (250ms) of text on the display.
 
 #### Syntax
 
-`void setScrollSpeed(uint8_t scrollSpeed)`
+`void setScrollSpeed(int scrollSpeed)`
 
 #### Parameters
 
-- `uint8_t scrollSpeed`: Scrolling speed in milliseconds.
+- `int scrollSpeed`: Scrolling speed in milliseconds.
 
 #### Returns
 

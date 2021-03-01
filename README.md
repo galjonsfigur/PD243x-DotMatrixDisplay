@@ -1,4 +1,4 @@
-# Arudino Dot-matrix Display Adapter Library
+# Arduino Dot-matrix Display Adapter Library
 
 ![PlatformIO CI](https://github.com/galjonsfigur/Arduino-DotMatrixLibrary/workflows/PlatformIO%20CI/badge.svg)  [![Documentation Status](https://readthedocs.org/projects/arduino-dotmatrixlibrary/badge/?version=latest)](https://arduino-dotmatrixlibrary.readthedocs.io/en/latest/?badge=latest)   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
