@@ -35,7 +35,7 @@ public:
 	void setAttributes(uint8_t attribute);
 	void setLampTest(bool lampTest);
 	void setBrightness(uint8_t brightnessLevel);
-	void setScrollSpeed(uint8_t scrollSpeed);
+	void setScrollSpeed(int scrollSpeed);
 	void setRedLED(bool redLed);
 	void setGreenLED(bool greenLed);
 
@@ -70,7 +70,7 @@ private:
 	uint8_t controlBus;
 	uint8_t dataBus;
 	uint8_t controlWord;
-	uint8_t scrollSpeed;
 	uint8_t pos;
+	int scrollSpeed;
 	char buffer[4] = {' ', ' ', ' ', ' '};
 };

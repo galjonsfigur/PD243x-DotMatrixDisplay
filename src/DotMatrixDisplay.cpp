@@ -30,14 +30,14 @@ void DotMatrixDisplay::sendChar(uint8_t position, char data) {
 	controlBus = (controlBus & ~PD2435_A1) | (position & PD2435_A1);
 	DotMatrixDisplay::write(controlBus, CONTROL_LANE_ADDR);
 
-	controlBus &= ~PD2435_CE0; //Disable display for a moment
+	controlBus &= ~PD2435_CE0; // Disable display for a moment
 	DotMatrixDisplay::write(controlBus, CONTROL_LANE_ADDR);
-	controlBus ^= PD2435_WR; 	// Toggle write
+	controlBus ^= PD2435_WR; // Toggle write
 	DotMatrixDisplay::write(controlBus, CONTROL_LANE_ADDR);
 	delay(1);
 	controlBus ^= PD2435_WR;
 	DotMatrixDisplay::write(controlBus, CONTROL_LANE_ADDR);
-	controlBus |= PD2435_CE0; //Enable display
+	controlBus |= PD2435_CE0; // Enable display
 	DotMatrixDisplay::write(controlBus, CONTROL_LANE_ADDR);
 }
 
@@ -52,7 +52,6 @@ DotMatrixDisplay::DotMatrixDisplay(TwoWire *I2CInterface) {
 	scrollSpeed = 250;
 }
 
-//flags & dataBus
 void DotMatrixDisplay::begin() {
 	controlBus |= PD2435_CE0 & PD2435_WR; // CE, WR high
 	controlBus &= ~PD2435_RST; // RST low (to toggle)
@@ -72,7 +71,7 @@ void DotMatrixDisplay::clear() {
 	DotMatrixDisplay::sendChar(0, controlWord);
 	controlWord &= ~PD2435_CLEAR;
 	DotMatrixDisplay::sendChar(0, controlWord);
-	// Set ascii mode
+	// Set ASCII mode
 	controlBus |= PD2435_A2;
 	DotMatrixDisplay::write(controlBus, CONTROL_LANE_ADDR);
 	pos = 0;
@@ -90,7 +89,7 @@ void DotMatrixDisplay::setAttributes(uint8_t attribute) {
 	controlWord = (controlWord & ~PD2435_ATTR_CURSOR) | (attribute & PD2435_ATTR_CURSOR);
 	controlWord = (controlWord & ~PD2435_BLINK) | (attribute & PD2435_BLINK);
 	DotMatrixDisplay::sendChar(0, controlWord);
-	// Set ascii mode
+	// Set ASCII mode
 	controlBus |= PD2435_A2;
 	DotMatrixDisplay::write(controlBus, CONTROL_LANE_ADDR);
 }
@@ -103,7 +102,7 @@ void DotMatrixDisplay::setLampTest(bool lampTest) {
 	if (lampTest) controlWord |= PD2435_LAMP_TEST;
 	else controlWord &= ~PD2435_LAMP_TEST;
 	DotMatrixDisplay::sendChar(0, controlWord);
-	// Set ascii mode
+	// Set ASCII mode
 	controlBus |= PD2435_A2;
 	DotMatrixDisplay::write(controlBus, CONTROL_LANE_ADDR);
 }
@@ -112,17 +111,16 @@ void DotMatrixDisplay::setBrightness(uint8_t brightnessLevel) {
 	 // Set command mode
 	controlBus &= ~PD2435_A2;
 	DotMatrixDisplay::write(controlBus, CONTROL_LANE_ADDR);
-	// set brightness bits
+	// Set brightness bits
 	controlWord = (controlWord & ~PD2435_BRIGHTNESS_A) | (brightnessLevel & PD2435_BRIGHTNESS_A);
 	controlWord = (controlWord & ~PD2435_BRIGHTNESS_B) | (brightnessLevel & PD2435_BRIGHTNESS_B);
 	DotMatrixDisplay::sendChar(0, controlWord);
-	// Set ascii mode
+	// Set ASCII mode
 	controlBus |= PD2435_A2;
 	DotMatrixDisplay::write(controlBus, CONTROL_LANE_ADDR);
 }
 
-// TODO: Boilerplate?
-void DotMatrixDisplay::setScrollSpeed(uint8_t speed) {
+void DotMatrixDisplay::setScrollSpeed(int speed) {
 	scrollSpeed = speed;
 }
 
